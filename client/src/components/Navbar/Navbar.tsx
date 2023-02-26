@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import useStyles from './styles'
 import { AppBar,Container, Toolbar,Box,IconButton,Typography,Menu,Avatar,Button,Tooltip,MenuItem  } from '@mui/material'
 import PsychologyIcon from '@mui/icons-material/Psychology'; 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,6 +10,7 @@ const settings = ['Profile','Account','Dashboard','Logout']
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
     const [anchorElUser,setAnchorElUser] = useState<null | HTMLElement>(null)
+    const classes = useStyles()
     const handleOpenNavMenu = (event:React.MouseEvent<HTMLElement>)=>{
         setAnchorElNav(event.currentTarget)
     }
@@ -22,7 +24,7 @@ const Navbar = () => {
         setAnchorElUser(null)
     }
   return (
-    <AppBar position='static' color='transparent'>
+    <AppBar position='static' elevation={0} color='transparent' className={classes.container}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters >
             <PsychologyIcon sx={{display:{xs:'none',md:'flex'},mr:1}} />
@@ -97,12 +99,13 @@ const Navbar = () => {
                 CodeBuddy
             </Typography>
             <Box
-            sx={{display:{xs:'none',md:'flex'},mx:'auto'}}
+            sx={{display:{xs:'none',md:'flex'},mx:'auto',px:'1rem'}}
             >
                 {pages.map((page)=>(<Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{my:2,color:'inherit',display:'block',letterSpacing:'2px',fontWeight:'600',mx:'5px'}}
+                className={classes.navItems}
                 >
                     {page}
                 </Button>))}
