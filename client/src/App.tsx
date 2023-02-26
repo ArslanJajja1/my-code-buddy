@@ -1,11 +1,11 @@
 import Home from "./pages/Home/Home"
-
+import {Box} from '@mui/material'
 function App() {
 
   return (
-    <div className="App">
+    <Box sx={{backgroundColor:'#FBFBFB'}}>
         <Home />
-    </div>
+    </Box>
   )
 }
 
