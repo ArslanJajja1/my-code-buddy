@@ -12,10 +12,10 @@ const Hero = () => {
         <Container maxWidth='xl' sx={{mt:{xs:1,md:'5rem'}}}>
             <Stack
              direction={{xs:'column',md:'row'}}
-             spacing={{xs:1,sm:2,md:4}}
+             spacing={4}
              sx={{mt:{xs:1,md:5},width:'100%'}}
             >
-                <Box sx={{width:{xs:'100%',md:'50%'}}}>
+                <Stack spacing={3} sx={{width:{xs:'100%',md:'50%'}}}>
                     <Typography
                     variant='subtitle2'
                     component='h6'
@@ -24,26 +24,23 @@ const Hero = () => {
                     sx={{letterSpacing:'1px',textTransform:'uppercase'}}
                     >Code Smarter Today</Typography>
                     <Typography
-                    color='secondary'
-                    sx={{typography:{xs:'h6',md:'h4'},fontWeight:'bolder'}}
+                    color='primary.main'
+                    sx={{typography:{xs:'h5',sm:'h4',md:'h3'},fontWeight:'700 !important',textAlign:{xs:'center',md:'left'}}}
                     component='h1'
-                    pb={2}
-                    textAlign='justify'
-                    >From Bugs to Brilliance <br/> AI-Powered Code Enhancement</Typography>
+                    lineHeight={2}
+                    >From Bugs to Brilliance <br/> AI-Powered CodeBuddy</Typography>
                     
                     <Typography
                     variant='body1'
-                    letterSpacing={1}
-                    textAlign='justify'
-                    pb={2}
+                    sx={{textAlign:'justify',letterSpacing:{xs:1,md:2}}}
                     >With our AI-powered solutions, you can correct code errors, convert code from one language to another, find bugs, and more. Our platform offers a seamless and effortless way to improve your code and take your development skills to the next level. Start coding smarter today with AI CodeBuddy.</Typography>
-                    <Stack spacing={2} direction='row'>
+                    <Stack spacing={2} direction={{xs:'column',md:'row'}} sx={{textAlign:{xs:'center',md:'left'}}}>
                     <Button
                     variant='contained'
                     >Start Using For Free</Button>
                     <Button variant='outlined'>No Credit Card Required</Button>
                     </Stack>
-                </Box>
+                </Stack>
                 <Box sx={{width:{xs:'100%',md:'50%'}}}>
                     <VideoPlayer />
                 </Box>

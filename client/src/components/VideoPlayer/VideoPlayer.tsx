@@ -25,8 +25,7 @@ const VideoPlayer = () => {
  playing={isPlaying}
  controls
  light='https://images.pexels.com/photos/8728286/pexels-photo-8728286.jpeg?auto=compress&cs=tinysrgb&w=600'
- 
-/>
+ />
 {/* {!isPlaying && (
  <div className={classes.customPlayButton} onClick={handlePlayButtonClick}>
    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">

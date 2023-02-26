@@ -1,4 +1,9 @@
+import { purple } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
+
+const PRIMARY_MAIN = '#1976d2'
+const PRIMARY_LIGHT = '#42a5f5'
+const PRIMARY_DARK = '#1565c0'
 
 export default makeStyles((theme)=>({
     container: {
@@ -15,7 +20,7 @@ export default makeStyles((theme)=>({
         position: 'absolute',
         top: 0,
         left: 0,
-        border:'1rem solid lightblue',
+        border:`1rem solid ${PRIMARY_MAIN}`,
         borderRadius:'5px'
       },
       customPlayButton: {
