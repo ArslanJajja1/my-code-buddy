@@ -7,21 +7,19 @@ const PRIMARY_DARK = '#1565c0'
 
 export default makeStyles((theme)=>({
     container: {
-        maxWidth: '800px', // limit player size on larger screens
+        maxWidth: '700px', // limit player size on larger screens
         margin: '0 auto',
       },
     playerWrapper: {
         position: 'relative',
         paddingTop: '56.5%', // 16:9 aspect ratio
-        marginBottom: '2rem',
-
       },
       reactPlayer: {
         position: 'absolute',
         top: 0,
         left: 0,
         border:`1rem solid ${PRIMARY_MAIN}`,
-        borderRadius:'5px'
+        borderRadius:'8px',
       },
       customPlayButton: {
         position: 'absolute',
