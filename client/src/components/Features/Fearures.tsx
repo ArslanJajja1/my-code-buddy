@@ -1,5 +1,7 @@
 import { Container, Box, Grid, Typography } from "@mui/material";
 import FeaturesCard from "../FeaturesCard/FeaturesCard";
+import CodeIcon from '@mui/icons-material/Code';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
 
 const featuresData = [
   {
@@ -7,42 +9,47 @@ const featuresData = [
     title: "Code correction",
     description:
       "The website can leverage OpenAI's natural language processing and machine learning capabilities to provide automated code correction, suggesting fixes for syntax errors, typos, and other common issues.",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
+
   },
   {
     id: 1,
     title: "Language conversion",
     description:
       "The website can allow users to convert code from one programming language to another, making it easier to switch between different languages or to integrate code written in different languages.",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
   },
   {
     id: 2,
     title: "Bug detection",
     description:
       "The website can use AI algorithms to detect bugs in code, flagging potential issues before they cause major problems.",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
+
   },
   {
     id: 3,
     title: "Code explanation",
     description:
       "The website can provide automated explanations for complex code snippets, breaking down complicated code into simpler terms and helping users better understand what the code does..",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
+
   },
   {
     id: 4,
     title: "Code optimization",
     description:
       "The website can analyze code and suggest optimizations, such as removing redundant code, simplifying complex expressions, and improving performance.",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
+
   },
   {
     id: 5,
     title: "AI-assisted code writing",
     description:
       "The website can provide AI-assisted code writing, suggesting code snippets and auto-completing code based on the user's input.",
-    icon: "",
+      icon: <CodeOffIcon sx={{fontSize:'3rem'}}/>
+
   }
 ];
 const Features = () => {
@@ -96,6 +103,7 @@ const Features = () => {
                   title={feature.title}
                   way={feature.id+1}
                   description={feature.description}
+                  Icon={feature.icon}
                 />
               </Grid>
             ))

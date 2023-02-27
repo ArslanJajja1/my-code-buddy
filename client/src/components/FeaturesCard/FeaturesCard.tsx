@@ -1,15 +1,20 @@
-import { Card, CardContent, CardHeader, Typography, Grid,CardActions,CardMedia,Button } from '@mui/material';
-
+import { Card, CardContent, CardHeader, Typography,IconButton, Grid,CardActions,CardMedia,Button,Avatar} from '@mui/material';
+import CodeIcon from '@mui/icons-material/Code';
 type propsTypes= {
     title:string,
     description:string,
-    way:number
+    way:number,
+    Icon:React.ReactNode
 }
 
-const FeaturesCard = ({title,description,way}:propsTypes) => {
+const FeaturesCard = ({title,description,way,Icon}:propsTypes) => {
   return (
     <Card sx={{ maxWidth: 345,minHeight:200 }}>
+              
       <CardContent>
+        <IconButton color='primary' size='large' >
+            {Icon}
+        </IconButton>
         <Typography variant='body2' letterSpacing={3} fontWeight='bold' color='primary.dark' >Way {way}</Typography>
         <Typography gutterBottom letterSpacing='1px !important' sx={{typography:{xs:'h6',md:'h5'}}} component="h5">
           {title}
