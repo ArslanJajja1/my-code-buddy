@@ -3,14 +3,15 @@ import { Card, CardContent, CardHeader, Typography, Grid,CardActions,CardMedia,B
 type propsTypes= {
     title:string,
     description:string,
-    step:string
+    step:string,
+    imageUrl:string
 }
-const StepsCard = ({title,description,step}:propsTypes) => {
+const StepsCard = ({title,description,step,imageUrl}:propsTypes) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=739&q=80"
+        image={imageUrl}
         title="green iguana"
       />
       <CardContent>
