@@ -9,7 +9,7 @@ const Hero = () => {
     <Box >
         <Navbar />
         <Divider />
-        <Container maxWidth='xl' sx={{mt:{xs:1,md:'5rem'}}}>
+        <Container maxWidth='xl' sx={{py:8}}>
             <Stack
              direction={{xs:'column',md:'row'}}
              spacing={4}
@@ -32,7 +32,7 @@ const Hero = () => {
                     
                     <Typography
                     variant='body1'
-                    sx={{textAlign:'justify',letterSpacing:{md:2}}}
+                    sx={{textAlign:'justify',letterSpacing:{xs:1,md:2}}}
                      >With our AI-powered solutions, you can correct code errors, convert code from one language to another, find bugs, and more. Our platform offers a seamless and effortless way to improve your code and take your development skills to the next level. Start coding smarter today with AI CodeBuddy.</Typography>
                     <Stack spacing={2} direction={{xs:'column',md:'row'}} sx={{textAlign:{xs:'center',md:'left'}}}>
                     <Button

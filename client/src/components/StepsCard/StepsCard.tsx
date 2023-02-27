@@ -14,11 +14,11 @@ const StepsCard = ({title,description,step}:propsTypes) => {
         title="green iguana"
       />
       <CardContent>
-        <Typography variant='body2' letterSpacing={2} fontWeight='bold' color='primary.dark' >Step {step}</Typography>
-        <Typography gutterBottom sx={{typography:{xs:'h6',md:'h5'}}} component="h5">
+        <Typography variant='body2' letterSpacing={3} fontWeight='bold' color='primary.dark' >Step {step}</Typography>
+        <Typography gutterBottom letterSpacing='1px !important' sx={{typography:{xs:'h6',md:'h5'}}} component="h5">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" textAlign='justify'>
           {description}
         </Typography>
       </CardContent>
