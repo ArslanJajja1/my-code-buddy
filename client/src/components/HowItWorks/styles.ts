@@ -8,5 +8,6 @@ export default makeStyles((theme)=>({
     },
     title:{
         color:SECONDARY_COLOR_MAIN
-    }
+    },
+    
 }))
