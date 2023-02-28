@@ -12,7 +12,7 @@ const featuresData = [
     id: 0,
     title: "Code correction",
     description:
-      "The website uses OpenAI's natural language processing and machine learning to identify and suggest fixes for syntax errors, typos, and other common coding issues, helping users write error-free code.",
+      "CodeBuddy uses  natural language processing and machine learning to identify and suggest fixes for syntax errors, typos, and other coding issues, helping users write error-free code.",
       icon: <ErrorIcon sx={{fontSize:'3rem'}}/>
 
   },
@@ -20,14 +20,14 @@ const featuresData = [
     id: 1,
     title: "Language conversion",
     description:
-      "The website enables users to convert code from one programming language to another, facilitating code integration and making it easier for users to switch between languages.",
+      "CodeBuddy enables users to convert code from one programming language to another, facilitating code integration and making it easier for users to switch between languages.",
       icon: <CloudSyncIcon sx={{fontSize:'3rem'}}/>
   },
   {
     id: 2,
     title: "Bug detection",
     description:
-      "The website uses AI algorithms to detect potential bugs in code, providing users with a warning before issues arise and helping them avoid costly mistakes.",
+      "CodeBuddy uses AI algorithms to detect potential bugs in code, providing users with a warning before issues arise and helping them avoid costly mistakes.",
       icon: <BugReportIcon sx={{fontSize:'3rem'}}/>
 
   },
@@ -35,7 +35,7 @@ const featuresData = [
     id: 3,
     title: "Code explanation",
     description:
-      "The website provides automated explanations for complex code snippets, making it easier for users to understand the code's functionality and purpose.",
+      "CodeBuddy provides automated explanations for complex code snippets, making it easier for users to understand the code's functionality and purpose.",
       icon: <HelpIcon sx={{fontSize:'3rem'}}/>
 
   },
@@ -43,7 +43,7 @@ const featuresData = [
     id: 4,
     title: "Code optimization",
     description:
-      "The website can analyze code and suggest optimizations, such as removing redundant code, simplifying complex expressions, and improving performance.",
+      "CodeBuddy can analyze code and suggest optimizations, such as removing redundant code, simplifying complex expressions, and improving performance.",
       icon: <SpeedIcon sx={{fontSize:'3rem'}}/>
 
   },
@@ -51,7 +51,7 @@ const featuresData = [
     id: 5,
     title: "AI-assisted code writing",
     description:
-      "TThe website offers AI-assisted code writing, suggesting code snippets and auto-completing code based on the user's input, helping users save time and write code more efficiently.",
+      "TCodeBuddy offers AI-assisted code writing, suggesting code snippets and auto-completing code based on the user's input, helping users save time and write code more efficiently.",
       icon: <AutorenewIcon sx={{fontSize:'3rem'}}/>
 
   }
