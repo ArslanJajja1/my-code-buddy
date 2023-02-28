@@ -75,15 +75,15 @@ const Features = () => {
           }}
           component="h2"
         >
-          CodeBuddy Can Help You In Many Ways !
+          Need CodeBuddy Help ?
         </Typography>
       </Box>
       <Grid
         container
         spacing={{ xs: 2 }}
-        sx={{ py: 8, justifyContent: "center", alignItems: "center" }}
+        sx={{ justifyContent: "center", alignItems: "center" }}
         mx="auto"
-        
+        py={4}
       >
         {
             featuresData.map((feature)=>(
