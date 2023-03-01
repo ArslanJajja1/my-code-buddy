@@ -10,35 +10,52 @@ import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
+import BugIcon from '@mui/icons-material/BugReport';
+import CodeIcon from '@mui/icons-material/Code';
+import LegacyIcon from '@mui/icons-material/SettingsApplications';
+import LearningIcon from '@mui/icons-material/School';
+import OptimizationIcon from '@mui/icons-material/Tune';
+import TeamIcon from '@mui/icons-material/People';
+import FreelancerIcon from '@mui/icons-material/Work';
+import QualityIcon from '@mui/icons-material/Assessment';
+import CollaborationIcon from '@mui/icons-material/Group';
+import { useCases } from '../../data/usecasesData';
 
+
+const icons = [<BugIcon />,<LegacyIcon/>,<CodeIcon/>,<LearningIcon/>,<OptimizationIcon/>,<TeamIcon/>,<FreelancerIcon/>,<CollaborationIcon/>,<QualityIcon/>]
 const Usecases = ()=> {
   return (
-    <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          9:30 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot>
-            <FastfoodIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Eat
-          </Typography>
-          <Typography>Because you need strength</Typography>
-        </TimelineContent>
-      </TimelineItem>
+    <Timeline position="alternate" sx={{py:8}}>
+      {
+        useCases.map((usecase,index)=>(
+          <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: 'auto 0',fontWeight:'bold',letterSpacing:'1px' }}
+            align="right"
+            variant="subtitle1"
+            color="primary.dark"
+          >
+            Usecase {index+1}
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
+            <TimelineDot color='primary'>
+              {icons[index]}
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Typography component="span" sx={{letterSpacing:'1px',typography:{xs:'caption',md:'body1'}}}>
+              {usecase.title}
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+        ))
+      }
       
-      <TimelineItem>
+       
+
+      {/* <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
           variant="body2"
@@ -60,6 +77,7 @@ const Usecases = ()=> {
           <Typography>Because it&apos;s awesome!</Typography>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
         <TimelineSeparator>
           <TimelineConnector />
@@ -75,6 +93,7 @@ const Usecases = ()=> {
           <Typography>Because you need rest</Typography>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
@@ -89,7 +108,7 @@ const Usecases = ()=> {
           </Typography>
           <Typography>Because this is the life you love!</Typography>
         </TimelineContent>
-      </TimelineItem>
+      </TimelineItem> */}
     </Timeline>
   );
 }
