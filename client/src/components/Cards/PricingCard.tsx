@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography, Button,IconButton,Stack } from '@mui/material';
-import List from '@mui/joy/List';
-import ListItem from '@mui/joy/ListItem';
-import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import DoneIcon from "@mui/icons-material/Done";
 
 const useStyles = makeStyles({
@@ -20,29 +17,7 @@ const useStyles = makeStyles({
     boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
     borderRadius: '10px',
     marginBottom: '2rem'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: '2rem'
-  },
-  price: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    marginBottom: '1rem'
-  },
-  // description: {
-  //   marginBottom: '2rem'
-  // },
-  // button: {
-  //   backgroundColor: '#03a9f4',
-  //   color: '#fff',
-  //   borderRadius: '20px',
-  //   fontWeight: 'bold',
-  //   '&:hover': {
-  //     backgroundColor: '#0288d1'
-  //   }
-  // }
+  }
 });
 type propTypes={
     title:string,
@@ -67,24 +42,8 @@ const PricingCard = ({ title, price, pricingFeatures, buttonText, onClick }:prop
           ${price}  <Typography component='span' color='text.secondary'>/ month</Typography>
         </Typography>
        <div>
-      {/* <Typography
-        id="decorated-list-demo"
-        level="body3"
-        textTransform="uppercase"
-        fontWeight="lg"
-        mb={1}
-      >
-        Ingredients
-      </Typography> */}
-      {/* <List
-        aria-labelledby="decorated-list-demo"
-        sx={{ '--List-decorator-size': '32px' }}
-      > */}
         {
             pricingFeatures.map(({feature,available},index)=>(
-              //   <ListItem>
-              //   <ListItemDecorator>🧅</ListItemDecorator> {feature}
-              // </ListItem>
               <Stack direction='row' alignItems='center'>
                   <IconButton >
                     <DoneIcon color={available?'primary':'inherit'}/>
@@ -93,14 +52,6 @@ const PricingCard = ({ title, price, pricingFeatures, buttonText, onClick }:prop
               </Stack>
             ))
         }
-        
-        {/* <ListItem>
-          <ListItemDecorator>🍤</ListItemDecorator> 2 Shrimps
-        </ListItem>
-        <ListItem>
-          <ListItemDecorator>🥓</ListItemDecorator> 120g bacon
-        </ListItem> */}
-      {/* </List> */}
     </div>
         <Button variant="contained" sx={{textAlign:'center',width:'100%',fontWeight:'bold',letterSpacing:'2px',mt:2}}  onClick={onClick}>
           {buttonText} 
