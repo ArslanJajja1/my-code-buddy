@@ -16,7 +16,7 @@ import FreelancerIcon from "@mui/icons-material/Work";
 import QualityIcon from "@mui/icons-material/Assessment";
 import CollaborationIcon from "@mui/icons-material/Group";
 import { Box } from "@mui/material";
-import { useCases } from "../../data/usecasesData";
+import { useCases } from "../../data/data";
 
 const icons = [
   <BugIcon />,
