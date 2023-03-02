@@ -1,5 +1,5 @@
 import { Container, Box, Grid, Typography } from "@mui/material";
-import FeaturesCard from "../FeaturesCard/FeaturesCard";
+import FeaturesCard from "../Cards/FeaturesCard";
 import ErrorIcon from '@mui/icons-material/Error';
  import CloudSyncIcon from '@mui/icons-material/CloudSync';
  import BugReportIcon from '@mui/icons-material/BugReport';

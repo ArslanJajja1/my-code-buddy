@@ -1,6 +1,6 @@
 import useStyles from './styles'
 import { Stack, Box, Container, Typography, Grid } from '@mui/material'
-import StepsCard from '../StepsCard/StepsCard'
+import StepsCard from '../Cards/StepsCard'
 
 const HowItWorks = () => {
   const classes = useStyles()
