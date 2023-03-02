@@ -8,7 +8,7 @@ import DoneIcon from "@mui/icons-material/Done";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    minWidth: 250,
     maxWidth: 400,
     margin: '0 auto',
     display: 'flex',
@@ -31,18 +31,18 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     marginBottom: '1rem'
   },
-  description: {
-    marginBottom: '2rem'
-  },
-  button: {
-    backgroundColor: '#03a9f4',
-    color: '#fff',
-    borderRadius: '20px',
-    fontWeight: 'bold',
-    '&:hover': {
-      backgroundColor: '#0288d1'
-    }
-  }
+  // description: {
+  //   marginBottom: '2rem'
+  // },
+  // button: {
+  //   backgroundColor: '#03a9f4',
+  //   color: '#fff',
+  //   borderRadius: '20px',
+  //   fontWeight: 'bold',
+  //   '&:hover': {
+  //     backgroundColor: '#0288d1'
+  //   }
+  // }
 });
 type propTypes={
     title:string,
@@ -60,11 +60,11 @@ const PricingCard = ({ title, price, pricingFeatures, buttonText, onClick }:prop
   return (
     <Card className={classes.root} sx={{mt:4}}>
       <CardContent>
-        <Typography textAlign='center' variant="h4" component="h2">
+        <Typography textAlign='center' sx={{typography:{xs:'h5',md:'h4'}}} component="h3">
           {title}
         </Typography>
-        <Typography fontWeight='bold' textAlign='center' py={2} color="primary" fontSize={40}>
-          ${price} / <Typography component='span'>month</Typography>
+        <Typography fontWeight='bold' textAlign='center' py={2} color="primary" sx={{typography:{xs:'h5',md:'h4'}}}  >
+          ${price}  <Typography component='span' color='text.secondary'>/ month</Typography>
         </Typography>
        <div>
       {/* <Typography
@@ -76,10 +76,10 @@ const PricingCard = ({ title, price, pricingFeatures, buttonText, onClick }:prop
       >
         Ingredients
       </Typography> */}
-      <List
+      {/* <List
         aria-labelledby="decorated-list-demo"
         sx={{ '--List-decorator-size': '32px' }}
-      >
+      > */}
         {
             pricingFeatures.map(({feature,available},index)=>(
               //   <ListItem>
@@ -100,9 +100,9 @@ const PricingCard = ({ title, price, pricingFeatures, buttonText, onClick }:prop
         <ListItem>
           <ListItemDecorator>🥓</ListItemDecorator> 120g bacon
         </ListItem> */}
-      </List>
+      {/* </List> */}
     </div>
-        <Button variant="contained" sx={{textAlign:'center',width:'100%'}}  onClick={onClick}>
+        <Button variant="contained" sx={{textAlign:'center',width:'100%',fontWeight:'bold',letterSpacing:'2px',mt:2}}  onClick={onClick}>
           {buttonText} 
         </Button>
       </CardContent>
