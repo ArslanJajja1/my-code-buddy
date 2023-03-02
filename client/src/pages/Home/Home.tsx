@@ -3,6 +3,7 @@ import HowItWorks from '../../components/HowItWorks/HowItWorks'
 import Features from '../../components/Features/Fearures'
 import Usecases from '../../components/Usecases/Usecases'
 import Pricing from '../../components/Pricing/Pricing'
+import Review from '../../components/Reviews/Review'
  
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Usecases />
       <Features />
       <Pricing />
+      <Review />
     </>
   )
 }
