@@ -17,11 +17,11 @@ export const useCases = [
       description: 'Our website provides automated explanations and tutorials to help students and beginners understand code.',
     },
     {
-      title: 'Optimize your code for better performance and efficiency',
+      title: 'Optimize your code for better performance',
       description: 'Improve the user experience and reduce server costs by optimizing your code with our website.',
     },
     {
-      title: 'Improve communication between technical and non-technical team members',
+      title: 'Improve communication between team members',
       description: 'Our website helps non-technical team members understand technical code and documentation, reducing communication barriers.',
     },
     {
@@ -33,7 +33,7 @@ export const useCases = [
       description: 'Our website makes it easier to work together on large projects, with code collaboration and code review features.',
     },
     {
-      title: 'Assess the quality of code produced by your developers',
+      title: 'Assess the quality of code ',
       description: 'Identify areas for improvement and ensure adherence to coding standards by using our website to assess the quality of code produced by your developers.',
     },
   ];
