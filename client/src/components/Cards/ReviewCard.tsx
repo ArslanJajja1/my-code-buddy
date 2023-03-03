@@ -3,11 +3,6 @@ import { makeStyles } from "@mui/styles";
 import {Stack,CardContent,Typography,Avatar,CardHeader,Card} from '@mui/material'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 400,
-    height:200,
-    margin: "auto",
-  },
   avatar: {
     backgroundColor: 'secondary.main',
     height:50,
@@ -25,7 +20,7 @@ const ReviewCard = ({ avatar, name,position, review }:propTypes) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card sx={{maxWidth:{md:400,xs:290,margin:'auto'}}}>
       <CardHeader
         avatar={
           <Avatar aria-label="reviewer" src={avatar} className={classes.avatar}>

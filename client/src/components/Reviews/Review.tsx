@@ -11,11 +11,37 @@ const settings = {
   speed: 500,
   slidesToShow: 2,
   slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
 
 const Review = () => {
   return (
-    <Container sx={{ my: 8 }}>
+    <Container maxWidth='xl' sx={{ my: 8,width:'90%' }}>
       <Headings heading1="Reviews" heading2="Users thoughts about CodeBuddy" />
       <Box sx={{ py: 4 }}>
         <Slider {...settings}>
