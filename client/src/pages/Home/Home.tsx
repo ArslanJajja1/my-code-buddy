@@ -4,6 +4,7 @@ import Features from '../../components/Features/Fearures'
 import Usecases from '../../components/Usecases/Usecases'
 import Pricing from '../../components/Pricing/Pricing'
 import Review from '../../components/Reviews/Review'
+import FAQ from '../../components/FAQ/FAQ'
  
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Features />
       <Pricing />
       <Review />
+      <FAQ />
     </>
   )
 }
