@@ -187,3 +187,29 @@ export const reviewData = [
       review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
 ]
+
+// FAQ Data
+
+export const faqData = [
+  {
+    question:"What is code correction?",
+    answer:" Code correction is the process of identifying and fixing errors in code, such as syntax errors, typos, and other common coding issues. Our website uses OpenAI's natural language processing and machine learning to provide automated code correction, making it easier for you to write error-free code."
+  },
+  {
+    question:'How does the language conversion feature work?',
+    answer:" Our website allows you to convert code from one programming language to another using OpenAI's machine learning capabilities. Simply paste your code into the language conversion tool and select the desired output language. Our tool will automatically translate your code into the new language, making it easier to integrate code written in different languages."
+  },
+  {
+    question:'How does bug detection work?',
+    answer:" Our website uses AI algorithms to detect potential bugs in code, flagging potential issues before they cause major problems. Our bug detection tool analyzes your code and provides you with a warning if it detects any potential issues, helping you avoid costly mistakes."
+  },  {
+    question:'How does code explanation work?',
+    answer:" Our website provides automated explanations for complex code snippets, breaking down complicated code into simpler terms and helping you better understand what the code does. Simply paste your code into the code explanation tool and our AI algorithms will provide you with an explanation of how the code works."
+  },  {
+    question:'Can the code optimization tool improve the performance of my code?',
+    answer:"Yes, our code optimization tool can analyze your code and suggest optimizations to improve code efficiency and performance. Our tool can identify redundant code, simplify complex expressions, and suggest other optimizations to help you write faster and more efficient code."
+  },  {
+    question:'How does AI-assisted code writing work?',
+    answer:"Our website offers AI-assisted code writing, suggesting code snippets and auto-completing code based on your input. Simply start typing your code and our AI algorithms will suggest code snippets and auto-complete your code, making it easier and faster to write code."
+  }
+]
