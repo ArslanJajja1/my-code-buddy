@@ -33,16 +33,12 @@ const FeaturesCard = ({ title, description, way, Icon }: propsTypes) => {
           sx={{ typography: { xs: "h6", md: "h5" } }}
           component="h5"
         >
-          {title}
+          {title.length>25 ? title.substring(0,25) + '...':title}
         </Typography>
         <Typography variant="body2" color="text.secondary" textAlign="justify">
-          {description}
+          {description.length>150 ? description.substring(0,150) + '...' : description}
         </Typography>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
   );
 };
