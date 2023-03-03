@@ -135,3 +135,55 @@ export const premiumPlanFeatures = [
     available: true,
   },
 ];
+
+// Reviews Data
+
+export const reviewData = [
+  {
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 1",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 2",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 3",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 4",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 5",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 6",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 7",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 8",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },{
+    avatarSrc:"https://i.pravatar.cc/300",
+      name:"John Doe 9",
+      position:"Software Engineer",
+      review:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin erat tellus, nec ullamcorper elit interdum eget. Duis vel risus nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+]
