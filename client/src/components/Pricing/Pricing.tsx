@@ -9,7 +9,7 @@ const Pricing = () => {
   return (
     <Container maxWidth="xl" sx={{ py: 8 }}>
       <Headings heading1="Pricing" heading2="Start Using CodeBuddy" />
-      <Stack direction={{ xs: "column", md: "row" }}>
+      <Stack direction={{ xs: "column", md: "row" }} flexWrap='wrap'>
       <PricingCard
           title="Free Plan"
           price="0"

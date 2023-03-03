@@ -5,8 +5,7 @@ import DoneIcon from "@mui/icons-material/Done";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 250,
-    maxWidth: 400,
+    width: 250,
     margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',

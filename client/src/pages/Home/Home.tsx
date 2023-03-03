@@ -5,6 +5,7 @@ import Usecases from '../../components/Usecases/Usecases'
 import Pricing from '../../components/Pricing/Pricing'
 import Review from '../../components/Reviews/Review'
 import FAQ from '../../components/FAQ/FAQ'
+import Footer from '../../components/Footer/Footer'
  
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Pricing />
       <Review />
       <FAQ />
+      <Footer/>
     </>
   )
 }
