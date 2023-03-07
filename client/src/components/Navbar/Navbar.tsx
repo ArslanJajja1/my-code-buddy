@@ -108,7 +108,7 @@ const Navbar = () => {
                   spy={true}
                   smooth={true}
                   offset={-100}
-                  duration={500}
+                  duration={1000}
                   key={page}
                 >
                   <MenuItem
