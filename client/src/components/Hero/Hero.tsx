@@ -12,7 +12,6 @@ import VideoPlayer from "../VideoPlayer/VideoPlayer";
 const Hero = () => {
   return (
     <Box>
-      <Navbar />
       <Divider />
       <Container maxWidth="xl" sx={{ py: 8 }}>
         <Stack
