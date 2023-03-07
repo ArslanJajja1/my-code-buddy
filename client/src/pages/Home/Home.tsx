@@ -12,7 +12,9 @@ const Home = () => {
   return (
     <>
       <Navbar/>
+      <div id="hero">
       <Hero />
+      </div>
       <div id="howitworks">
       <HowItWorks />
       </div>

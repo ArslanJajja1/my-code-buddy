@@ -16,12 +16,14 @@ import {
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import MenuIcon from "@mui/icons-material/Menu";
 import avatarImage from "../../assets/images/arslan.jpg";
+import { Link } from "react-scroll";
 
-const pages = ["How It Works", "Usecases","Features",  "Pricing", "Reviews"];
+const pages = ["How It Works", "Usecases", "Features", "Pricing", "Reviews"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const [activeClass, setActiveClass] = useState<null | string>(null);
   const classes = useStyles();
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -33,43 +35,47 @@ const Navbar = () => {
     event: React.MouseEvent<HTMLElement | HTMLButtonElement>
   ) => {
     setAnchorElNav(null);
-    const sectionId = (event.currentTarget as HTMLButtonElement).name;
-    const anchor = document.getElementById(sectionId);
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // add active class functionality
+
+    let sectionId: string | null = (event.currentTarget as HTMLButtonElement)
+      .name;
+    if (!sectionId) {
+      sectionId = (event.currentTarget as HTMLButtonElement).getAttribute(
+        "data-name"
+      );
     }
+    setActiveClass(sectionId);
   };
   const handleCloseUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(null);
   };
+
   return (
-    <AppBar
-      position="fixed"
-      elevation={0}
-      className={classes.container}
-    >
+    <AppBar position="fixed" elevation={0} className={classes.container}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PsychologyIcon
             color="primary"
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            color="primary.main"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              letterSpacing: "2px",
-              textDecoration: "none",
-            }}
-          >
-            CodeBuddy
-          </Typography>
+          <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+            <Typography
+              variant="h6"
+              noWrap
+              color="primary.main"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontWeight: 700,
+                letterSpacing: "2px",
+                cursor: "pointer",
+              }}
+              onClick={()=>setActiveClass(null)}
+            >
+              CodeBuddy
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -97,9 +103,26 @@ const Navbar = () => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link
+                  to={page.toLowerCase().replace(/\s+/g, "")}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  key={page}
+                >
+                  <MenuItem
+                    onClick={handleCloseNavMenu}
+                    className={`${
+                      activeClass ==
+                        page.toLocaleLowerCase().replace(/\s+/g, "") &&
+                      classes.activeNavItemMobile
+                    }`}
+                    data-name={page.toLowerCase().replace(/\s+/g, "")}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -110,8 +133,6 @@ const Navbar = () => {
           <Typography
             variant="body2"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -119,31 +140,52 @@ const Navbar = () => {
               fontWeight: 700,
               letterSpacing: "2px",
               color: "primary.main",
-              textDecoration: "none",
+              cursor: "pointer",
             }}
+            onClick={()=>setActiveClass(null)}
           >
-            CodeBuddy
+            <Link
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              CodeBuddy
+            </Link>
           </Typography>
           <Box
             sx={{ display: { xs: "none", md: "flex" }, mx: "auto", px: "1rem" }}
           >
             {pages.map((page) => (
-              <Button
+              <Link
+                to={page.toLowerCase().replace(/\s+/g, "")}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={1000}
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "inherit",
-                  display: "block",
-                  letterSpacing: "2px",
-                  fontWeight: "600",
-                  mx: "5px",
-                }}
-                className={classes.navItems}
-                name={page.toLowerCase().replace(/\s+/g, "")}
               >
-                {page}
-              </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "inherit",
+                    display: "block",
+                    letterSpacing: "2px",
+                    fontWeight: "600",
+                    mx: "5px",
+                  }}
+                  className={`${
+                    activeClass ==
+                      page.toLocaleLowerCase().replace(/\s+/g, "") &&
+                    classes.activeNavItem
+                  }`}
+                  name={page.toLowerCase().replace(/\s+/g, "")}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
