@@ -1,4 +1,3 @@
-import Navbar from "../Navbar/Navbar";
 import {
   Container,
   Stack,
@@ -47,7 +46,11 @@ const Hero = () => {
             </Typography>
 
             <Typography
-              sx={{ typography:{xs:'body2',md:'body1'},textAlign: "justify", letterSpacing: { xs: 1, md: 2 } }}
+              sx={{
+                typography: { xs: "body2", md: "body1" },
+                textAlign: "justify",
+                letterSpacing: { xs: 1, md: 2 },
+              }}
             >
               With our AI-powered solutions, you can correct code errors,
               convert code from one language to another, find bugs, and more.
