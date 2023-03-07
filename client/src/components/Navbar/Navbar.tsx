@@ -17,7 +17,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import MenuIcon from "@mui/icons-material/Menu";
 import avatarImage from "../../assets/images/arslan.jpg";
 
-const pages = ["How It Works", "Usecases", "Pricing"];
+const pages = ["How It Works", "Usecases","Features",  "Pricing", "Reviews"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -29,17 +29,23 @@ const Navbar = () => {
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
-  const handleCloseNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleCloseNavMenu = (
+    event: React.MouseEvent<HTMLElement | HTMLButtonElement>
+  ) => {
     setAnchorElNav(null);
+    const sectionId = (event.currentTarget as HTMLButtonElement).name;
+    const anchor = document.getElementById(sectionId);
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   };
   const handleCloseUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(null);
   };
   return (
     <AppBar
-      position="static"
+      position="fixed"
       elevation={0}
-      color="transparent"
       className={classes.container}
     >
       <Container maxWidth="xl">
@@ -69,7 +75,6 @@ const Navbar = () => {
               size="large"
               aria-label="Nav items"
               aria-controls="menu-appbar"
-              aria-aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
             >
@@ -135,6 +140,7 @@ const Navbar = () => {
                   mx: "5px",
                 }}
                 className={classes.navItems}
+                name={page.toLowerCase().replace(/\s+/g, "")}
               >
                 {page}
               </Button>
@@ -147,7 +153,6 @@ const Navbar = () => {
                 sx={{ p: 0 }}
                 aria-label="User profile menu"
                 aria-controls="menu-userbar"
-                aria-aria-haspopup="true"
               >
                 <Avatar alt="Arslan" src={avatarImage} />
               </IconButton>
