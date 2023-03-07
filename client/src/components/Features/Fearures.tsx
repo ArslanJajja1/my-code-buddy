@@ -53,7 +53,7 @@ const featuresData = [
 ];
 const Features = () => {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl"  >
       <Box textAlign="center">
         <Typography
           sx={{
