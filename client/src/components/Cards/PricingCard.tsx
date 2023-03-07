@@ -68,7 +68,7 @@ const PricingCard = ({
         </Typography>
         <div>
           {pricingFeatures.map(({ feature, available }, index) => (
-            <Stack direction="row" alignItems="center">
+            <Stack direction="row" alignItems="center" key={index}>
               <IconButton>
                 <DoneIcon color={available ? "primary" : "inherit"} />
               </IconButton>
