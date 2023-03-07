@@ -26,6 +26,7 @@ export default function FAQ() {
           <Accordion
             expanded={expanded === `panel${index + 1}`}
             onChange={handleChange(`panel${index + 1}`)}
+            key={index}
           >
             <AccordionSummary
               aria-controls={`panel${index + 1}d-content`}
