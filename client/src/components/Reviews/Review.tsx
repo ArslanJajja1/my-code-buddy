@@ -41,7 +41,7 @@ const settings = {
 
 const Review = () => {
   return (
-    <Container maxWidth='xl' sx={{ my: 8,width:'90%' }}>
+    <Container maxWidth='xl' sx={{ my: 8,width:'90%'  }}>
       <Headings heading1="Reviews" heading2="Users thoughts about CodeBuddy" />
       <Box sx={{ py: 4 }}>
         <Slider {...settings}>
