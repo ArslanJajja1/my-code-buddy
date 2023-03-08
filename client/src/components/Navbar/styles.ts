@@ -10,7 +10,6 @@ export default makeStyles((theme)=>({
    },
   activeNavItem:{
     backgroundColor:'#F2F6F9 !important',
-    border:'1px solid #1565C0 !important'
   },
   activeNavItemMobile:{
     backgroundColor:'#F2F6F9 !important',
