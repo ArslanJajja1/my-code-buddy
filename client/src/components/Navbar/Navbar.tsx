@@ -17,6 +17,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import MenuIcon from "@mui/icons-material/Menu";
 import avatarImage from "../../assets/images/arslan.jpg";
 import { Link } from "react-scroll";
+import {Link as NavigationLink,Outlet} from 'react-router-dom'
 
 const pages = ["How It Works", "Usecases", "Features", "Pricing", "Reviews"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -190,7 +191,10 @@ const Navbar = () => {
               </Link>
             ))}
           </Box>
+          <NavigationLink to="/login">
           <Button variant="contained">Login</Button>
+          </NavigationLink>
+          <Outlet/>
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open Settings">
               <IconButton

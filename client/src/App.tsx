@@ -2,11 +2,23 @@ import Home from "./pages/Home/Home";
 import { Box } from "@mui/material";
 import { theme } from "./theme";
 import { ThemeProvider } from "@mui/styles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Auth/Login/Login";
+import Signup from "./pages/Auth/Signup/Signup";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ backgroundColor: "#FBFBFB" }}>
-        <Home />
+        <BrowserRouter>
+        <Routes> 
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="*" element="404" />
+      </Routes>
+    </BrowserRouter>
+      
       </Box>
     </ThemeProvider>
   );
