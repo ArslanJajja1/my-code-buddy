@@ -7,7 +7,7 @@ import {
   Divider,
 } from "@mui/material";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import {Link,Outlet} from 'react-router-dom'
+import { Link, Outlet } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -64,9 +64,10 @@ const Hero = () => {
               direction={{ xs: "column", md: "row" }}
               sx={{ textAlign: { xs: "center", md: "left" } }}
             >
-              <Link to="/signup">
-              <Button variant="contained">Start Using For Free</Button>
-              </Link>
+              <Button component={Link} to="/signup" variant="contained">
+                Start Using For Free
+              </Button>
+
               <Button variant="outlined">No Credit Card Required</Button>
             </Stack>
           </Stack>
