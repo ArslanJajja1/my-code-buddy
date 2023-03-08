@@ -52,6 +52,7 @@ const Navbar = () => {
   };
 
   return (
+     
     <AppBar position="fixed" elevation={0} className={classes.container}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -59,6 +60,7 @@ const Navbar = () => {
             color="primary"
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
+          
           <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
             <Typography
               variant="h6"
@@ -71,7 +73,7 @@ const Navbar = () => {
                 letterSpacing: "2px",
                 cursor: "pointer",
               }}
-              onClick={()=>setActiveClass(null)}
+              onClick={() => setActiveClass(null)}
             >
               CodeBuddy
             </Typography>
@@ -142,7 +144,7 @@ const Navbar = () => {
               color: "primary.main",
               cursor: "pointer",
             }}
-            onClick={()=>setActiveClass(null)}
+            onClick={() => setActiveClass(null)}
           >
             <Link
               to="hero"
