@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useStyles from "./styles";
 import {
   AppBar,
@@ -17,13 +17,19 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import MenuIcon from "@mui/icons-material/Menu";
 import avatarImage from "../../assets/images/arslan.jpg";
 import { Link } from "react-scroll";
+import { useScrollspy } from "../../hooks/useScrollSpy";
 
 const pages = ["How It Works", "Usecases", "Features", "Pricing", "Reviews"];
+const ids = ["howitworks","usecases","features","pricing","reviews"]
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [activeClass, setActiveClass] = useState<null | string>(null);
+  const activeId:string = useScrollspy(ids)
+  useEffect(()=>{
+    setActiveClass(activeId)
+  },[activeId])
   const classes = useStyles();
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -180,7 +186,8 @@ const Navbar = () => {
                   }}
                   className={`${
                     activeClass ==
-                      page.toLocaleLowerCase().replace(/\s+/g, "") &&
+                      page.toLocaleLowerCase().replace(/\s+/g, "")
+                      &&
                     classes.activeNavItem
                   }`}
                   name={page.toLowerCase().replace(/\s+/g, "")}

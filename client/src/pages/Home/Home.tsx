@@ -48,14 +48,6 @@ const Home = () => {
       <FAQ />
       <Footer />
       {showBtn && (
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "20px",
-            right: "20px",
-            zIndex: 999,
-          }}
-        >
           <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
             <IconButton
               size="large"
@@ -71,7 +63,6 @@ const Home = () => {
               <KeyboardArrowUpIcon />
             </IconButton>
           </Link>
-        </Box>
       )}
     </div>
   );
