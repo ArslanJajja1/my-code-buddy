@@ -190,7 +190,8 @@ const Navbar = () => {
               </Link>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Button variant="contained">Login</Button>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open Settings">
               <IconButton
                 onClick={handleOpenUserMenu}
@@ -223,7 +224,7 @@ const Navbar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
