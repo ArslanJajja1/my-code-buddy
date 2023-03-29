@@ -44,10 +44,12 @@ export default function SignUp() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            paddingTop: 8,
+            paddingBottom:6,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            height:'100vh'
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -123,8 +125,8 @@ export default function SignUp() {
               </Grid>
             </Grid>
           </Box>
-        </Box>
         <Copyright sx={{ mt: 5 }} />
+        </Box>
       </Container>
     </ThemeProvider>
   );
