@@ -5,7 +5,7 @@ export default makeStyles((theme)=>({
     position:'relative'
   },
   container:{
-    backgroundColor:'#FBFBFB !important',
+    backgroundColor:'#FAFAFA !important',
     color:'black !important',
    },
   activeNavItem:{

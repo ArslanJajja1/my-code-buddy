@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: "#FBFBFB" }}>
+      <Box sx={{ backgroundColor: "#F0F5F8" }}>
         <BrowserRouter>
         <Routes> 
           <Route path="/" element={<Home />} />
