@@ -1,20 +1,15 @@
 import { Container, Box, Grid, Typography } from "@mui/material";
 import FeaturesCard from "../Cards/FeaturesCard";
-import ErrorIcon from "@mui/icons-material/Error";
-import CloudSyncIcon from "@mui/icons-material/CloudSync";
-import BugReportIcon from "@mui/icons-material/BugReport";
-import HelpIcon from "@mui/icons-material/Help";
-import SpeedIcon from "@mui/icons-material/Speed";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
+import {Error,CloudSync,BugReport,Help,Speed,Autorenew} from "@mui/icons-material";
 import { featuresData } from "../../data/data";
 
 const featureDataIcons = [
-  <ErrorIcon sx={{ fontSize: "3rem" }} />,
-  <CloudSyncIcon sx={{ fontSize: "3rem" }} />,
-  <BugReportIcon sx={{ fontSize: "3rem" }} />,
-  <HelpIcon sx={{ fontSize: "3rem" }} />,
-  <SpeedIcon sx={{ fontSize: "3rem" }} />,
-  <AutorenewIcon sx={{ fontSize: "3rem" }} />,
+  <Error sx={{ fontSize: "3rem" }} />,
+  <CloudSync sx={{ fontSize: "3rem" }} />,
+  <BugReport sx={{ fontSize: "3rem" }} />,
+  <Help sx={{ fontSize: "3rem" }} />,
+  <Speed sx={{ fontSize: "3rem" }} />,
+  <Autorenew sx={{ fontSize: "3rem" }} />,
 ];
 const Features = () => {
   return (

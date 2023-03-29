@@ -8,7 +8,7 @@ import Review from "../../components/Reviews/Review";
 import FAQ from "../../components/FAQ/FAQ";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import {KeyboardArrowUp} from "@mui/icons-material";
 import { Link } from "react-scroll";
 import { IconButton, Box } from "@mui/material";
 
@@ -60,7 +60,7 @@ const Home = () => {
                 right: "20px",
               }}
             >
-              <KeyboardArrowUpIcon />
+              <KeyboardArrowUp />
             </IconButton>
           </Link>
       )}

@@ -8,26 +8,20 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import BugIcon from "@mui/icons-material/BugReport";
 import CodeIcon from "@mui/icons-material/Code";
-import LegacyIcon from "@mui/icons-material/SettingsApplications";
-import LearningIcon from "@mui/icons-material/School";
-import OptimizationIcon from "@mui/icons-material/Tune";
-import TeamIcon from "@mui/icons-material/People";
-import FreelancerIcon from "@mui/icons-material/Work";
-import QualityIcon from "@mui/icons-material/Assessment";
-import CollaborationIcon from "@mui/icons-material/Group";
+import {SettingsApplications,School,Tune,People,Assessment,Work,Group} from "@mui/icons-material";
 import { Box, Container } from "@mui/material";
 import { useCases } from "../../data/data";
 
 const icons = [
   <BugIcon />,
-  <LegacyIcon />,
+  <SettingsApplications />,
   <CodeIcon />,
-  <LearningIcon />,
-  <OptimizationIcon />,
-  <TeamIcon />,
-  <FreelancerIcon />,
-  <CollaborationIcon />,
-  <QualityIcon />,
+  <School />,
+  <Tune />,
+  <People />,
+  <Work />,
+  <Group />,
+  <Assessment />,
 ];
 const Usecases = () => {
   return (
