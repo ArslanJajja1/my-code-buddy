@@ -1,8 +1,14 @@
-import React from 'react'
+import {Box,Stack,Container,Grid} from '@mui/material'
+import Navbar from '../../components/Navbar/Navbar'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <Box>
+        <Container maxWidth='xl'>
+            <Navbar dashboard={true}/>
+            Dashboard
+        </Container>
+    </Box>
   )
 }
 

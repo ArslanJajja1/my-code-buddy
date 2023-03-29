@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
   return (
     <div style={{ position: "relative" }}>
-      <Navbar />
+      <Navbar dashboard={false}/>
       <div id="hero">
         <Hero />
       </div>

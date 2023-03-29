@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Auth/Login/Login";
 import Signup from "./pages/Auth/Signup/Signup";
-import Dashboard from "./pages/Dashboard/dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
