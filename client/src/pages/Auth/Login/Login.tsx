@@ -11,7 +11,6 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {Link as NavigationLink} from 'react-router-dom'
 function Copyright(props: any) {
   return (
@@ -26,7 +25,6 @@ function Copyright(props: any) {
   );
 }
 
-const theme = createTheme();
 
 export default function Login() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -39,16 +37,18 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Box>
+        <Container component="main" maxWidth="xs" >
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            paddingTop: 8,
+            paddingBottom:6,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-          }}
+            height:'100vh'
+           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
@@ -102,9 +102,10 @@ export default function Login() {
               </Grid>
             </Grid>
           </Box>
-        </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
+        </Box>
       </Container>
-    </ThemeProvider>
+
+      </Box>
   );
 }
