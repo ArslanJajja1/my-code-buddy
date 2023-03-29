@@ -192,7 +192,9 @@ const Navbar = () => {
             ))}
           </Box>
   
-          <Button component={NavigationLink} to="/login" variant="contained">Login</Button>
+          {/* <Button component={NavigationLink} to="/login" variant="contained">Login</Button> */}
+          <Button component={NavigationLink} to="/dashboard" variant="contained">Dashboard</Button>
+
           <Outlet/>
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open Settings">
