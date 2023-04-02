@@ -254,3 +254,44 @@ export const featuresData = [
       "TCodeBuddy offers AI-assisted code writing, suggesting code snippets and auto-completing code based on the user's input, helping users save time and write code more efficiently."
   },
 ];
+
+// Dashboard cards data
+
+export const dashboardCardsData = [
+  {
+    id: 0,
+    title: "Code correction",
+    description:
+      "CodeBuddy uses  natural language processing and machine learning to identify and suggest fixes for syntax errors, typos, and other coding issues, helping users write error-free code."
+  },
+  {
+    id: 1,
+    title: "Language conversion",
+    description:
+      "CodeBuddy enables users to convert code from one programming language to another, facilitating code integration and making it easier for users to switch between languages.",
+  },
+  {
+    id: 2,
+    title: "Bug detection",
+    description:
+      "CodeBuddy uses AI algorithms to detect potential bugs in code, providing users with a warning before issues arise and helping them avoid costly mistakes."
+  },
+  {
+    id: 3,
+    title: "Code explanation",
+    description:
+      "CodeBuddy provides automated explanations for complex code snippets, making it easier for users to understand the code's functionality and purpose.",
+  },
+  {
+    id: 4,
+    title: "Code optimization",
+    description:
+      "CodeBuddy can analyze code and suggest optimizations, such as removing redundant code, simplifying complex expressions, and improving performance.",
+  },
+  {
+    id: 5,
+    title: "AI-assisted code writing",
+    description:
+      "TCodeBuddy offers AI-assisted code writing, suggesting code snippets and auto-completing code based on the user's input, helping users save time and write code more efficiently."
+  }
+]
