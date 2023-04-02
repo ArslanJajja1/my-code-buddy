@@ -32,6 +32,7 @@ const BugDetection = () => {
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
+      
     </Container>
     </>
   )
