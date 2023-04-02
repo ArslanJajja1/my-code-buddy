@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import DashboardCard from '../../components/Cards/DashboardCard'
 import {Error,CloudSync,BugReport,Help,Speed,Autorenew} from "@mui/icons-material";
 import { dashboardCardsData } from "../../data/data";
-
+import { Link } from 'react-router-dom';
 const icons = [
   <Error sx={{ fontSize: "3rem" }} />,
   <CloudSync sx={{ fontSize: "3rem" }} />,
@@ -27,13 +27,15 @@ const Dashboard = () => {
           >
             {
               dashboardCardsData.map((feature,index)=>(
-            <Grid item xs={12} sm={6} md={4} sx={{
+            <Grid  key={index} item xs={12} sm={6} md={4} sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-            }}>
+             }}>
+              <Box component={Link} to={feature.title.split(' ').join('-')}  sx={{textDecoration:"none",color:"inherit"}}>
               <DashboardCard title={feature.title} description={feature.description}
                icon={icons[index%5]}/>
+              </Box>
             </Grid>
               ))
             }
