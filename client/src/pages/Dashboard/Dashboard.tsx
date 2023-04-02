@@ -19,12 +19,21 @@ const Dashboard = () => {
       <Divider />
       <Container maxWidth='xl' sx={{ marginTop: "5rem" }}>
         <Box>
-          <Grid container spacing={{ xs: 2 }} mx="auto" py={4} 
+          <Grid container spacing={{ xs: 2 }} mx="auto" py={4} sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
           >
             {
               dashboardCardsData.map((feature,index)=>(
-            <Grid item xs={12} sm={6} md={4} lg={3} >
-              <DashboardCard title={feature.title} description={feature.description} icon={icons[index]}/>
+            <Grid item xs={12} sm={6} md={4} lg={3} sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+              <DashboardCard title={feature.title} description={feature.description}
+               icon={icons[index%5]}/>
             </Grid>
               ))
             }

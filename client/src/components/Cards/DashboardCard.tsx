@@ -13,7 +13,7 @@ const DashboardCard = ({title,description,icon}:propTypes) => {
             <IconButton color="primary">
                 {icon}
             </IconButton>
-            <IconButton>
+            <IconButton size='large'>
                 <ArrowOutward />
             </IconButton>
         </Stack>
