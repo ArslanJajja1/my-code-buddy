@@ -1,3 +1,4 @@
+import React, { useLayoutEffect } from 'react'
 import Home from "./pages/Home/Home";
 import { Box } from "@mui/material";
 import { theme } from "./theme";
@@ -8,9 +9,12 @@ import Signup from "./pages/Auth/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
+  useLayoutEffect(() => {
+    document.body.style.backgroundColor = "#F0F5F8"
+});
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: "#F0F5F8" }}>
+      <Box >
         <BrowserRouter>
         <Routes> 
           <Route path="/" element={<Home />} />
