@@ -1,5 +1,6 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
 import Navbar from "../../../components/Navbar/Navbar"
+import CodeCorrectionForm from "./CodeCorrectionForm"
 
 const CodeCorrection = () => {
   return (
@@ -32,6 +33,7 @@ const CodeCorrection = () => {
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
+      <CodeCorrectionForm />
     </Container>
     </>
   )
