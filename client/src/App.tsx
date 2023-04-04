@@ -7,12 +7,12 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Login from "./pages/Auth/Login/Login";
 import Signup from "./pages/Auth/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import BugDetection from './pages/Tools/BugDetection'
-import CodeCorrection from './pages/Tools/CodeCorrection';
-import CodeExplanation from './pages/Tools/CodeExplanation';
-import CodeWriting from './pages/Tools/CodeWriting';
-import LanguageConversion from './pages/Tools/LanguageConversion';
-import CodeOptimization from './pages/Tools/CodeOptimization';
+import BugDetection from './pages/Tools/BugDetection/BugDetection'
+import CodeCorrection from './pages/Tools/CodeCorrection/CodeCorrection';
+import CodeExplanation from './pages/Tools/CodeExplanation/CodeExplanation';
+import CodeWriting from './pages/Tools/CodeWriting/CodeWriting';
+import LanguageConversion from './pages/Tools/LanguageConversion/LanguageConversion';
+import CodeOptimization from './pages/Tools/CodeOptimization/CodeOptimization';
 
 function App() {
   useLayoutEffect(() => {

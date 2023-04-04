@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
-const CodeExplanation = () => {
+const CodeCorrection = () => {
   return (
     <>
     <Navbar dashboard={true}/>
@@ -28,7 +28,7 @@ const CodeExplanation = () => {
           }}
           component="h2"
         >
-          Code Explanation
+          Code Correction
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
@@ -37,4 +37,4 @@ const CodeExplanation = () => {
   )
 }
 
-export default CodeExplanation
+export default CodeCorrection

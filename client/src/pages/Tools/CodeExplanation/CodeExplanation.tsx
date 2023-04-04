@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
-const LanguageConversion = () => {
+const CodeExplanation = () => {
   return (
     <>
     <Navbar dashboard={true}/>
@@ -28,7 +28,7 @@ const LanguageConversion = () => {
           }}
           component="h2"
         >
-          Language Conversion
+          Code Explanation
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
@@ -37,4 +37,4 @@ const LanguageConversion = () => {
   )
 }
 
-export default LanguageConversion
+export default CodeExplanation

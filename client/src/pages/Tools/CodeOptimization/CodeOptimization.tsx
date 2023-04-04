@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
-const BugDetection = () => {
+const CodeOptimization = () => {
   return (
     <>
     <Navbar dashboard={true}/>
@@ -28,14 +28,13 @@ const BugDetection = () => {
           }}
           component="h2"
         >
-          Bug Detection
+         Code Optimization
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
-      
     </Container>
     </>
   )
 }
 
-export default BugDetection
+export default CodeOptimization

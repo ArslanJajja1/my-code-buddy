@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
-const CodeCorrection = () => {
+const BugDetection = () => {
   return (
     <>
     <Navbar dashboard={true}/>
@@ -28,13 +28,14 @@ const CodeCorrection = () => {
           }}
           component="h2"
         >
-          Code Correction
+          Bug Detection
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
+      
     </Container>
     </>
   )
 }
 
-export default CodeCorrection
+export default BugDetection

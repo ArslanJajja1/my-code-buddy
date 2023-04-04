@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
-const CodeOptimization = () => {
+const CodeWriting = () => {
   return (
     <>
     <Navbar dashboard={true}/>
@@ -28,7 +28,7 @@ const CodeOptimization = () => {
           }}
           component="h2"
         >
-         Code Optimization
+          Code Writing
         </Typography>
          <Divider sx={{width:{xs:"10rem",md:"20rem"},mx:"auto"}}/>
       </Box>
@@ -37,4 +37,4 @@ const CodeOptimization = () => {
   )
 }
 
-export default CodeOptimization
+export default CodeWriting
